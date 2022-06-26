@@ -13,4 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('teste', function () { return view('welcome.blade.php'); });
+Route::get('teste', function () { return ['teste' => 'teste']; });
