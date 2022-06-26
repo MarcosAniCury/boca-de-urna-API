@@ -47,7 +47,7 @@ class PopulatePresident extends Migration
             $lula->delete();
         }
 
-        $bolsonaro = President::where('code', 22)->fisrt();
+        $bolsonaro = President::where('code', 22)->first();
         if ($bolsonaro) {
             $bolsonaro->delete();
         }

@@ -201,6 +201,9 @@ class PopulateStates extends Migration
         $sergipe->updated_at = now();
         $sergipe->save();
 
+    }
+
+
     /**
      * Reverse the migrations.
      *
@@ -343,7 +346,7 @@ class PopulateStates extends Migration
             $pernambuco
             ->delete();
         }
-        
+
         $piaui = State::where('initials', "PI")->first();
         if ($piaui) {
             $piaui

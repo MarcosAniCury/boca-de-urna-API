@@ -28,6 +28,6 @@ class CreateTablePresidents extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_presidents');
+        Schema::dropIfExists('presidents');
     }
 }
