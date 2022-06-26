@@ -4,15 +4,18 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class President extends Model
+class Address extends Model
 {
-    //Table name
-    protected $table = "presidents";
+    //table name
+    protected $table = 'adress';
 
     //attributes fillable
     protected $fillable = [
-        'name',
-        'code',
+        'neighborhood',
+        'street',
+        'number',
+        'complement',
+        'city_id',
     ];
 
     //user 1 to 1
