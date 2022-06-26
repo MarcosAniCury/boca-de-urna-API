@@ -16,4 +16,4 @@ use App\Http\Controllers\userController;
 
 Route::get('teste', function () { return ['teste' => 'teste']; });
 
-Route::post('getUserInfo', userController::getUserInfo());
+Route::post('getUserInfo', 'userController@getUserInfo');
