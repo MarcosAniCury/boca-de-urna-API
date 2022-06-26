@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
 use App\Models\State;
 
 class PopulateStates extends Migration
@@ -181,7 +179,27 @@ class PopulateStates extends Migration
         $pernambuco->created_at = now();
         $pernambuco->updated_at = now();
         $pernambuco->save();
-    }
+
+        $piaui = new State();
+        $piaui->name = "Piauí";
+        $piaui->initials = "PI";
+        $piaui->created_at = now();
+        $piaui->updated_at = now();
+        $piaui->save();
+
+        $riograndedonorte = new State();
+        $riograndedonorte->name = "Rio Grande do Norte";
+        $riograndedonorte->initials = "RN";
+        $riograndedonorte->created_at = now();
+        $riograndedonorte->updated_at = now();
+        $riograndedonorte->save();
+
+        $sergipe = new State();
+        $sergipe->name = "Sergipe";
+        $sergipe->initials = "SE";
+        $sergipe->created_at = now();
+        $sergipe->updated_at = now();
+        $sergipe->save();
 
     /**
      * Reverse the migrations.
@@ -190,6 +208,158 @@ class PopulateStates extends Migration
      */
     public function down()
     {
-        //
+        $minasgerais = State::where('initials', "MG")->first();
+        if ($minasgerais) {
+            $minasgerais->delete();
+        }
+
+        $espiritosanto = State::where('initials', "ES")->first();
+        if ($espiritosanto) {
+            $espiritosanto->delete();
+        }
+
+        $saopaulo = State::where('initials', "SP")->first();
+        if ($saopaulo) {
+            $saopaulo->delete();
+        }
+
+        $riodejaneiro = State::where('initials', "RJ")->first();
+        if ($riodejaneiro) {
+            $riodejaneiro->delete();
+        }
+
+        $parana = State::where('initials', "PA")->first();
+        if ($parana) {
+            $parana->delete();
+        }
+
+        $riograndedosul = State::where('initials', "RS")->first();
+        if ($riograndedosul) {
+            $riograndedosul->delete();
+        }
+
+        $santacatarina = State::where('initials', "SC")->first();
+        if ($santacatarina) {
+            $santacatarina->delete();
+        }
+
+        $matogrosso = State::where('initials', "MT")->first();
+        if ($matogrosso) {
+            $matogrosso->delete();
+        }
+
+        $matogrossodosul = State::where('initials', "MS")->first();
+        if ($matogrossodosul) {
+            $matogrossodosul
+            ->delete();
+        }
+
+        $goias = State::where('initials', "GO")->first();
+        if ($goias) {
+            $goias
+            ->delete();
+        }
+
+        $distritofederal = State::where('initials', "DF")->first();
+        if ($distritofederal) {
+            $distritofederal
+            ->delete();
+        }
+
+        $acre = State::where('initials', "AC")->first();
+        if ($acre) {
+            $acre
+            ->delete();
+        }
+
+        $amazonas = State::where('initials', "AM")->first();
+        if ($amazonas) {
+            $amazonas
+            ->delete();
+        }
+
+        $amapa = State::where('initials', "AM")->first();
+        if ($amapa) {
+            $amapa
+            ->delete();
+        }
+
+        $tocantins = State::where('initials', "TO")->first();
+        if ($tocantins) {
+            $tocantins
+            ->delete();
+        }
+
+        $roraima = State::where('initials', "RR")->first();
+        if ($roraima) {
+            $roraima
+            ->delete();
+        }
+
+        $para = State::where('initials', "PA")->first();
+        if ($para) {
+            $para
+            ->delete();
+        }
+
+        $rondonia = State::where('initials', "RO")->first();
+        if ($rondonia) {
+            $rondonia
+            ->delete();
+        }
+
+        $alagoas = State::where('initials', "AL")->first();
+        if ($alagoas) {
+            $alagoas
+            ->delete();
+        }
+
+        $bahia = State::where('initials', "BA")->first();
+        if ($bahia) {
+            $bahia
+            ->delete();
+        }
+
+        $ceara = State::where('initials', "CE")->first();
+        if ($ceara) {
+            $ceara
+            ->delete();
+        }
+
+        $maranhao = State::where('initials', "MA")->first();
+        if ($maranhao) {
+            $maranhao
+            ->delete();
+        }
+
+        $paraiba = State::where('initials', "PB")->first();
+        if ($paraiba) {
+            $paraiba
+            ->delete();
+        }
+
+        $pernambuco = State::where('initials', "PE")->first();
+        if ($pernambuco) {
+            $pernambuco
+            ->delete();
+        }
+        
+        $piaui = State::where('initials', "PI")->first();
+        if ($piaui) {
+            $piaui
+            ->delete();
+        }
+
+        $riograndedonorte = State::where('initials', "RN")->first();
+        if ($riograndedonorte) {
+            $riograndedonorte
+            ->delete();
+        }
+
+        $sergipe = State::where('initials', "SE")->first();
+        if ($sergipe) {
+            $sergipe
+            ->delete();
+        }
     }
 }
